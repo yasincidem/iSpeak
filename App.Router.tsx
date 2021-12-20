@@ -16,8 +16,6 @@ export type GlobalStackRouteParam = StackNavigationProp<AppRouteParams>
 
 export type GlobalRouteProp = RouteProp<AppRouteParams>
 
-interface AppRoute { }
-
 const Stack = createNativeStackNavigator();
 
 const Router =
