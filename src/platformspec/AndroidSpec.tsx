@@ -1,0 +1,1 @@
+export const ANDROID_DEFAULT_RIPPLE_CONFIG = { color: '#DDDDDD', borderless: true }

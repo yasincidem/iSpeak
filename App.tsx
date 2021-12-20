@@ -1,21 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import styled from 'styled-components/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import Router from './App.Router';
 
-export default function App() {
+const StyledScreenContainer = styled(SafeAreaProvider)({
+  flex: 1,
+  backgroundColor: '#ffffff'
+})
+
+const App = () => {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <StyledScreenContainer>
+      <StatusBar />
+      {Router}
+    </StyledScreenContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
